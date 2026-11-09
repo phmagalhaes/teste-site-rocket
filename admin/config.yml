@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: phmagalhaes/teste-site-rocket # Mude para o seu usuário do github
+  branch: main
+
+media_folder: "assets/images" 
+public_folder: "/assets/images"
+
+collections:
+  - name: "landing-page"
+    label: "Conteúdo da Landing Page"
+    files:
+      - label: "Textos Principais"
+        name: "textos"
+        file: "data/conteudo.json" 
+        fields:
+          - {label: "Título Principal (Hero)", name: "titulo_hero", widget: "string"}
+          - {label: "Subtítulo", name: "subtitulo", widget: "string"}
+          - {label: "Texto sobre a equipe", name: "sobre_texto", widget: "text"}
