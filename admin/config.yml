@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: phmagalhaes/teste-site-rocket # Mude para o seu usuário do github
+  name: git-gateway
   branch: main
 
 media_folder: "assets/images" 
