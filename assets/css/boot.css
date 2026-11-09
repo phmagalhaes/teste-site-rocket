@@ -1,0 +1,56 @@
+:root {
+    --azul: #101a4d;
+    --azul-escuro: #07183a;
+    --azul-claro: #243d8f;
+    --amarelo: #f5c518;
+
+    --branco: #ffffff;
+    --cinza-claro: #dfe1e7;
+    --cinza: #667085;
+    --borda: #dfe2e9;
+
+    --largura-conteudo: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+
+    background-color: var(--branco);
+    color: var(--azul-escuro);
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+    width: min(90%, var(--largura-conteudo));
+    margin: 0 auto;
+}

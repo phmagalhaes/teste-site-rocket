@@ -1,0 +1,195 @@
+main {
+  position: relative;
+
+  .overlay_header {
+    background-color: var(--azul);
+    position: absolute;
+    top: -90px;
+    width: 100%;
+    height: 90px;
+    box-shadow: 0 0 20px 5px var(--azul);
+  }
+}
+main .introducao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 35px 0;
+  background-color: white;
+
+  .content {
+    width: 90%;
+  }
+
+  .title {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 40px;
+    color: var(--azul);
+    text-shadow: -2px 2px 0 var(--amarelo);
+  }
+
+  .subtitle {
+    color: var(--amarelo);
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    font-size: 20px;
+  }
+
+  .text {
+    color: var(--azul-escuro);
+  }
+}
+
+main .impacto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 50px 0;
+  background-color: var(--azul);
+  position: relative;
+  padding-top: 30px;
+  margin-top: 20px;
+  box-shadow: 0 0 20px 5px var(--azul);
+  /* margin-top: 100px; */
+
+  .overlay {
+    top: -150px;
+    position: absolute;
+    /* z-index: -1; */
+
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to top, var(--azul), transparent);
+  }
+
+  .content {
+    width: 90%;
+  }
+
+  .title {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 40px;
+    color: var(--amarelo);
+  }
+
+  .subtitle {
+    color: var(--cinza-claro);
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    /* text-shadow: -1px 1px 0 var(--amarelo); */
+  }
+
+  .text {
+    color: white;
+  }
+}
+
+main .mvv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px 0;
+
+  .mvv_content {
+    width: 90%;
+  }
+
+  .mvv_top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+
+    div {
+      width: 45%;
+
+      .title {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 40px;
+        color: var(--azul);
+        text-shadow: -2px 2px 0 var(--amarelo);
+      }
+
+      .content {
+        color: var(--azul-escuro);
+      }
+    }
+  }
+
+  /* Container principal da seção */
+  .valores {
+    max-width: 1200px; /* Limita a largura para telas grandes */
+    margin: 0 auto; /* Centraliza na tela */
+    padding: 60px 20px;
+    font-family:
+      "Inter", "Segoe UI", Helvetica, sans-serif; /* Tipografia moderna */
+  }
+
+  /* Título principal da seção */
+  .valores .title {
+    text-align: center;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 40px;
+    color: var(--azul);
+    text-shadow: -2px 2px 0 var(--amarelo);
+  }
+
+  /* Grid para alinhar os cards automaticamente */
+  .valores .cards {
+    display: grid;
+    /* Cria colunas responsivas: mínimo de 250px, máximo dividindo o espaço igual */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px; /* Espaçamento entre os cards */
+  }
+
+  /* Estilo de cada card individual */
+  .valores .valor {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    border-bottom: 4px solid transparent; /* Preparando para o efeito hover */
+    transition: all 0.3s ease; /* Animação suave para todas as mudanças */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Efeito ao passar o mouse por cima do card */
+  .valores .valor:hover {
+    transform: translateY(-8px); /* Levanta o card */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Aumenta a sombra */
+    border-bottom: 4px solid #ff4b2b; /* Linha de destaque (cor de fogo/foguete) */
+  }
+
+  /* Título do Valor (Inovação, Segurança, etc) */
+  .valores .valor_title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #222222;
+    margin-top: 0;
+    margin-bottom: 12px;
+    position: relative;
+  }
+
+  /* Texto descritivo */
+  .valores .valor_descricao {
+    font-size: 1rem;
+    color: #555555;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Responsividade para celulares */
+  @media (max-width: 600px) {
+    .valores .title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+    .valores .valor {
+      padding: 30px 20px;
+    }
+  }
+}
