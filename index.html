@@ -746,5 +746,40 @@
         </button>
       </div>
     </div>
+
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <script>
+      // 1. Puxar os dados do CMS e injetar na tela
+      fetch("/data/conteudo.json")
+        .then((response) => {
+          if (!response.ok)
+            throw new Error("Arquivo conteudo.json não encontrado");
+          return response.json();
+        })
+        .then((data) => {
+          // Substitui os textos se as chaves existirem no JSON
+          if (data.titulo_hero)
+            document.getElementById("cms-titulo-hero").innerText =
+              data.titulo_hero;
+          if (data.subtitulo)
+            document.getElementById("cms-subtitulo").innerText = data.subtitulo;
+          if (data.sobre_texto)
+            document.getElementById("cms-sobre-texto").innerText =
+              data.sobre_texto;
+        })
+        .catch((error) => console.warn("Aviso do CMS:", error));
+
+      // 2. Redirecionamento após o login no painel
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>
