@@ -44,14 +44,21 @@
           <span></span>
         </button>
 
-        <nav class="header__nav" id="main-menu" aria-label="Navegação principal">
+        <nav
+          class="header__nav"
+          id="main-menu"
+          aria-label="Navegação principal"
+        >
           <ul class="header__list">
-            <li><a href="./index.html" class="header__link active"> Home </a></li>
+            <li><a href="#inicio" class="header__link active"> Início </a></li>
             <li><a href="#about" class="header__link"> Sobre nós </a></li>
             <li><a href="#projeto" class="header__link"> Projetos </a></li>
-            <li><a href="#competicoes" class="header__link"> Competições </a></li>
+            <li>
+              <a href="#competicoes" class="header__link"> Competições </a>
+            </li>
             <li><a href="#contato" class="header__link"> Contato </a></li>
             <li><a href="#facaparte" class="header__link"> Faça Parte </a></li>
+            <li><a href="#parceiros" class="header__link"> Parceiros </a></li>
           </ul>
         </nav>
       </div>
@@ -59,7 +66,7 @@
 
     <main>
       <!-- HERO -->
-      <section class="hero">
+      <section class="hero" id="inicio">
         <img
           class="hero__image"
           src="./assets/images/banner02.jpg"
@@ -479,7 +486,7 @@
       </section>
 
       <!-- PARCEIROS -->
-      <section class="partners">
+      <section class="partners" id="parceiros">
         <div class="container">
           <div class="section-title section-title--center">
             <span> 09 • APOIO </span>
@@ -515,25 +522,40 @@
             style="background-color: var(--cinza-claro)"
           >
             <div class="partner">
-              <img src="./assets/images/patrocinadores/UTFPR_logo.png" alt="UTFPR" />
+              <img
+                src="./assets/images/patrocinadores/UTFPR_logo.png"
+                alt="UTFPR"
+              />
             </div>
             <div class="partner">
               <img src="/assets/images/patrocinadores/cedai.png" alt="CEDAI" />
             </div>
             <div class="partner">
-              <img src="/assets/images/patrocinadores/texiglass.png" alt="Texiglass" />
+              <img
+                src="/assets/images/patrocinadores/texiglass.png"
+                alt="Texiglass"
+              />
             </div>
             <div class="partner">
               <img src="/assets/images/patrocinadores/ansys.png" alt="Ansys" />
             </div>
             <div class="partner">
-              <img src="/assets/images/patrocinadores/solidworks.png" alt="SolidWorks" />
+              <img
+                src="/assets/images/patrocinadores/solidworks.png"
+                alt="SolidWorks"
+              />
             </div>
             <div class="partner">
-              <img src="/assets/images/patrocinadores/adesipar.jpg" alt="Adesipar" />
+              <img
+                src="/assets/images/patrocinadores/adesipar.jpg"
+                alt="Adesipar"
+              />
             </div>
             <div class="partner">
-              <img src="/assets/images/patrocinadores/jabuti2.png" alt="Jabuti" />
+              <img
+                src="/assets/images/patrocinadores/jabuti2.png"
+                alt="Jabuti"
+              />
             </div>
             <div class="partner">
               <p>CIRCUIT NEW</p>
@@ -554,7 +576,7 @@
 
           <div class="footer__column">
             <h3>NAVEGAÇÃO</h3>
-            <a href="./index.html"> Home </a>
+            <a href="#inicio"> Home </a>
             <a href="#about"> Sobre nós </a>
             <a href="#projeto"> Projetos </a>
             <a href="#competicoes"> Competições </a>
@@ -741,6 +763,40 @@
           }
         });
       }
+
+      // ---------- Link ativo conforme o scroll ----------
+      (function () {
+        const links = [...document.querySelectorAll(".header__link")];
+        const secoes = links.map((l) =>
+          document.querySelector(l.getAttribute("href")),
+        );
+        const header = document.querySelector(".header");
+
+        function atualizarLinkAtivo() {
+          const margem = (header ? header.offsetHeight : 0) + 80;
+          let atual = 0;
+
+          secoes.forEach((secao, i) => {
+            if (secao && secao.getBoundingClientRect().top <= margem) atual = i;
+          });
+
+          // No fim da página, marca o último link
+          if (
+            window.innerHeight + window.scrollY >=
+            document.documentElement.scrollHeight - 2
+          ) {
+            atual = secoes.length - 1;
+          }
+
+          links.forEach((l, i) => l.classList.toggle("active", i === atual));
+        }
+
+        window.addEventListener("scroll", atualizarLinkAtivo, {
+          passive: true,
+        });
+        window.addEventListener("resize", atualizarLinkAtivo);
+        atualizarLinkAtivo();
+      })();
     </script>
   </body>
 </html>
