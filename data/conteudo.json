@@ -1,7 +1,68 @@
 {
-  "titulo_hero": "EQUIPE ROCKET",
+  "titulo_hero": "EQUIPE ROCKET TESTE",
+  "link_facaparte": "",
+  "galeria": [
+    {
+      "imagem": "/assets/images/galeria/01.heic",
+      "alt": "Equipe Rocket"
+    },
+    {
+      "imagem": "/assets/images/galeria/02.heic",
+      "alt": "Equipe Rocket durante desenvolvimento"
+    },
+    {
+      "imagem": "/assets/images/galeria/03.heic",
+      "alt": "Manufatura do foguete"
+    },
+    {
+      "imagem": "/assets/images/galeria/04.heic",
+      "alt": "Equipe Rocket durante competição"
+    },
+    {
+      "imagem": "/assets/images/galeria/05.heic",
+      "alt": "Equipe Rocket durante competição"
+    }
+  ],
   "subtitulo": "Levando a engenharia além da sala de aula.",
+  "patrocinadores": [
+    {
+      "nome": "UTFPR",
+      "imagem": "/assets/images/patrocinadores/UTFPR_logo.png"
+    },
+    {
+      "nome": "CEDAI",
+      "imagem": "/assets/images/patrocinadores/cedai.png"
+    },
+    {
+      "nome": "Texiglass",
+      "imagem": "/assets/images/patrocinadores/texiglass.png"
+    },
+    {
+      "nome": "Ansys",
+      "imagem": "/assets/images/patrocinadores/ansys.png"
+    },
+    {
+      "nome": "SolidWorks",
+      "imagem": "/assets/images/patrocinadores/solidworks.png"
+    },
+    {
+      "nome": "Adesipar",
+      "imagem": "/assets/images/patrocinadores/adesipar.jpg"
+    },
+    {
+      "nome": "Jabuti",
+      "imagem": "/assets/images/patrocinadores/jabuti2.png"
+    },
+    {
+      "nome": "CIRCUIT NEW"
+    }
+  ],
   "sobre_texto": "A Equipe Rocket é uma equipe de extensão da UTFPR – Campus Cornélio Procópio, formada por estudantes de diferentes áreas da engenharia que trabalham no desenvolvimento de foguetes para competições nacionais.",
+  "patrocinador_principal": {
+    "nome": "Jabuti Lazer e Conhecimento",
+    "imagem": "/assets/images/patrocinadores/jabuti.jpg",
+    "descricao": "O Jabuti Lazer e Conhecimento é um espaço de ecoturismo pedagógico e lazer localizado em Londrina (PR), voltado a grupos escolares (da educação infantil ao ensino fundamental), que combina vivências práticas na natureza, trilhas, fazendinha, planetário e atividades recreativas em um parque aquático para transformar conteúdos teóricos da sala de aula em aprendizado lúdico."
+  },
   "estatisticas": {
     "membros": "+200",
     "anos": "+10",
@@ -9,33 +70,10 @@
     "foguetes": "+35"
   },
   "foguete": {
-    "imagem": "/assets/images/foguete.jpg",
+    "imagem": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Apollo_11_Saturn_V_lifting_off_on_July_16%2C_1969.jpg/330px-Apollo_11_Saturn_V_lifting_off_on_July_16%2C_1969.jpg?utm_source=pt.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "texto": "Por trás de cada lançamento existem meses de planejamento, desenvolvimento, simulações, fabricação e testes.",
-    "altura": "1.5 M",
-    "massa": "5 Kg",
+    "altura": "50 M",
+    "massa": "5 T",
     "apogeu": "1 KM"
-  },
-  "galeria": [
-    { "imagem": "/assets/images/galeria/01.heic", "alt": "Equipe Rocket" },
-    { "imagem": "/assets/images/galeria/02.heic", "alt": "Equipe Rocket durante desenvolvimento" },
-    { "imagem": "/assets/images/galeria/03.heic", "alt": "Manufatura do foguete" },
-    { "imagem": "/assets/images/galeria/04.heic", "alt": "Equipe Rocket durante competição" },
-    { "imagem": "/assets/images/galeria/05.heic", "alt": "Equipe Rocket durante competição" }
-  ],
-  "patrocinador_principal": {
-    "nome": "Jabuti Lazer e Conhecimento",
-    "imagem": "/assets/images/patrocinadores/jabuti.jpg",
-    "descricao": "O Jabuti Lazer e Conhecimento é um espaço de ecoturismo pedagógico e lazer localizado em Londrina (PR), voltado a grupos escolares (da educação infantil ao ensino fundamental), que combina vivências práticas na natureza, trilhas, fazendinha, planetário e atividades recreativas em um parque aquático para transformar conteúdos teóricos da sala de aula em aprendizado lúdico."
-  },
-  "patrocinadores": [
-    { "nome": "UTFPR", "imagem": "/assets/images/patrocinadores/UTFPR_logo.png" },
-    { "nome": "CEDAI", "imagem": "/assets/images/patrocinadores/cedai.png" },
-    { "nome": "Texiglass", "imagem": "/assets/images/patrocinadores/texiglass.png" },
-    { "nome": "Ansys", "imagem": "/assets/images/patrocinadores/ansys.png" },
-    { "nome": "SolidWorks", "imagem": "/assets/images/patrocinadores/solidworks.png" },
-    { "nome": "Adesipar", "imagem": "/assets/images/patrocinadores/adesipar.jpg" },
-    { "nome": "Jabuti", "imagem": "/assets/images/patrocinadores/jabuti2.png" },
-    { "nome": "CIRCUIT NEW" }
-  ],
-  "link_facaparte": ""
+  }
 }
