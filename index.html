@@ -765,38 +765,38 @@
       }
 
       // ---------- Link ativo conforme o scroll ----------
-      (function () {
-        const links = [...document.querySelectorAll(".header__link")];
-        const secoes = links.map((l) =>
-          document.querySelector(l.getAttribute("href")),
-        );
-        const header = document.querySelector(".header");
+      // (function () {
+      //   const links = [...document.querySelectorAll(".header__link")];
+      //   const secoes = links.map((l) =>
+      //     document.querySelector(l.getAttribute("href")),
+      //   );
+      //   const header = document.querySelector(".header");
 
-        function atualizarLinkAtivo() {
-          const margem = (header ? header.offsetHeight : 0) + 80;
-          let atual = 0;
+      //   function atualizarLinkAtivo() {
+      //     const margem = (header ? header.offsetHeight : 0) + 80;
+      //     let atual = 0;
 
-          secoes.forEach((secao, i) => {
-            if (secao && secao.getBoundingClientRect().top <= margem) atual = i;
-          });
+      //     secoes.forEach((secao, i) => {
+      //       if (secao && secao.getBoundingClientRect().top <= margem) atual = i;
+      //     });
 
-          // No fim da página, marca o último link
-          if (
-            window.innerHeight + window.scrollY >=
-            document.documentElement.scrollHeight - 2
-          ) {
-            atual = secoes.length - 1;
-          }
+      //     // No fim da página, marca o último link
+      //     if (
+      //       window.innerHeight + window.scrollY >=
+      //       document.documentElement.scrollHeight - 2
+      //     ) {
+      //       atual = secoes.length - 1;
+      //     }
 
-          links.forEach((l, i) => l.classList.toggle("active", i === atual));
-        }
+      //     links.forEach((l, i) => l.classList.toggle("active", i === atual));
+      //   }
 
-        window.addEventListener("scroll", atualizarLinkAtivo, {
-          passive: true,
-        });
-        window.addEventListener("resize", atualizarLinkAtivo);
-        atualizarLinkAtivo();
-      })();
+      //   window.addEventListener("scroll", atualizarLinkAtivo, {
+      //     passive: true,
+      //   });
+      //   window.addEventListener("resize", atualizarLinkAtivo);
+      //   atualizarLinkAtivo();
+      // })();
     </script>
   </body>
 </html>
