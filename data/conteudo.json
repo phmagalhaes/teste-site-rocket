@@ -21,6 +21,10 @@
     {
       "imagem": "/assets/images/galeria/05.heic",
       "alt": "Equipe Rocket durante competição"
+    },
+    {
+      "imagem": "https://static.wikia.nocookie.net/pokemonshow/images/9/9c/Equipe_rocket.jpg/revision/latest?cb=20101011184550&path-prefix=pt-br",
+      "alt": "Equipe Rocket"
     }
   ],
   "subtitulo": "Levando a engenharia além da sala de aula.",
