@@ -70,7 +70,7 @@
     "foguetes": "+35"
   },
   "foguete": {
-    "imagem": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Apollo_11_Saturn_V_lifting_off_on_July_16%2C_1969.jpg/330px-Apollo_11_Saturn_V_lifting_off_on_July_16%2C_1969.jpg?utm_source=pt.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "imagem": "/assets/images/uploads/foguete.jpg",
     "texto": "Por trás de cada lançamento existem meses de planejamento, desenvolvimento, simulações, fabricação e testes.",
     "altura": "50 M",
     "massa": "5 T",
