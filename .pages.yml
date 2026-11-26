@@ -1,0 +1,58 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: pt
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "site"
+    label: "Conteúdo do site"
+    files:
+      - name: "conteudo"
+        label: "Página inicial"
+        file: "data/conteudo.json"
+        format: "json"
+        fields:
+          - { label: "Título do hero", name: "titulo_hero", widget: "string" }
+          - { label: "Subtítulo do hero", name: "subtitulo", widget: "string" }
+          - { label: "Texto 'Quem Somos'", name: "sobre_texto", widget: "text" }
+          - { label: "Link do formulário 'Quero fazer parte'", name: "link_facaparte", widget: "string", required: false, hint: "Deixe vazio para mostrar o aviso 'Em desenvolvimento'." }
+          - label: "Estatísticas"
+            name: "estatisticas"
+            widget: "object"
+            fields:
+              - { label: "Membros", name: "membros", widget: "string", hint: "Ex: +200" }
+              - { label: "Anos de equipe", name: "anos", widget: "string" }
+              - { label: "Competições", name: "competicoes", widget: "string" }
+              - { label: "Foguetes desenvolvidos", name: "foguetes", widget: "string" }
+          - label: "Foguete"
+            name: "foguete"
+            widget: "object"
+            fields:
+              - { label: "Foto do foguete", name: "imagem", widget: "image" }
+              - { label: "Texto", name: "texto", widget: "text" }
+              - { label: "Altura", name: "altura", widget: "string" }
+              - { label: "Massa", name: "massa", widget: "string" }
+              - { label: "Apogeu", name: "apogeu", widget: "string" }
+          - label: "Galeria"
+            name: "galeria"
+            widget: "list"
+            hint: "A primeira foto aparece em destaque (maior)."
+            fields:
+              - { label: "Foto", name: "imagem", widget: "image" }
+              - { label: "Descrição (alt)", name: "alt", widget: "string" }
+          - label: "Patrocinador principal"
+            name: "patrocinador_principal"
+            widget: "object"
+            fields:
+              - { label: "Nome", name: "nome", widget: "string" }
+              - { label: "Imagem", name: "imagem", widget: "image" }
+              - { label: "Descrição", name: "descricao", widget: "text" }
+          - label: "Parceiros e apoio"
+            name: "patrocinadores"
+            widget: "list"
+            fields:
+              - { label: "Nome", name: "nome", widget: "string" }
+              - { label: "Logo", name: "imagem", widget: "image", required: false, hint: "Sem logo, o nome aparece como texto." }
