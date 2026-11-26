@@ -58,7 +58,8 @@ content:
             type: string
       - name: galeria
         label: Galeria
-        type: list
+        type: object
+        list: true
         description: A primeira foto aparece em destaque (maior).
         fields:
           - name: imagem
@@ -82,7 +83,8 @@ content:
             type: text
       - name: patrocinadores
         label: Parceiros e Apoio
-        type: list
+        type: object
+        list: true
         fields:
           - name: nome
             label: Nome
@@ -90,3 +92,5 @@ content:
           - name: imagem
             label: Logo
             type: image
+            required: false
+            description: Sem logo, o nome aparece como texto.
