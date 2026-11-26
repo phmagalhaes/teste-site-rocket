@@ -17,23 +17,23 @@
   },
   "galeria": [
     {
-      "imagem": "/assets/images/galeria/01.heic",
+      "imagem": "/assets/images/galeria/01.jpg",
       "alt": "Equipe Rocket"
     },
     {
-      "imagem": "/assets/images/galeria/02.heic",
+      "imagem": "/assets/images/galeria/02.jpg",
       "alt": "Equipe Rocket durante desenvolvimento"
     },
     {
-      "imagem": "/assets/images/galeria/03.heic",
+      "imagem": "/assets/images/galeria/03.jpg",
       "alt": "Manufatura do foguete"
     },
     {
-      "imagem": "/assets/images/galeria/04.heic",
+      "imagem": "/assets/images/galeria/04.jpg",
       "alt": "Equipe Rocket durante competição"
     },
     {
-      "imagem": "/assets/images/galeria/05.heic",
+      "imagem": "/assets/images/galeria/05.jpg",
       "alt": "Equipe Rocket durante competição"
     }
   ],
