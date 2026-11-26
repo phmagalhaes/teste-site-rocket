@@ -1,6 +1,20 @@
 {
-  "titulo_hero": "EQUIPE ROCKET TESTEeeeeee",
-  "link_facaparte": "",
+  "titulo_hero": "EQUIPE ROCKET TESTE",
+  "subtitulo": "Levando a engenharia além da sala de aula.",
+  "sobre_texto": "A Equipe Rocket é uma equipe de extensão da UTFPR – Campus Cornélio Procópio, formada por estudantes de diferentes áreas da engenharia que trabalham no desenvolvimento de foguetes para competições nacionais.",
+  "estatisticas": {
+    "membros": "+200",
+    "anos": "+10",
+    "competicoes": "+20",
+    "foguetes": "+35"
+  },
+  "foguete": {
+    "imagem": "/assets/images/uploads/apollo_11_saturn_v_lifting_off_on_july_16-_1969.jpg",
+    "texto": "Por trás de cada lançamento existem meses de planejamento, desenvolvimento, simulações, fabricação e testes.",
+    "altura": "50 M",
+    "massa": "5 T",
+    "apogeu": "1 KM"
+  },
   "galeria": [
     {
       "imagem": "/assets/images/galeria/01.heic",
@@ -23,7 +37,11 @@
       "alt": "Equipe Rocket durante competição"
     }
   ],
-  "subtitulo": "Levando a engenharia além da sala de aula.",
+  "patrocinador_principal": {
+    "nome": "Jabuti Lazer e Conhecimento",
+    "imagem": "/assets/images/patrocinadores/jabuti.jpg",
+    "descricao": "O Jabuti Lazer e Conhecimento é um espaço de ecoturismo pedagógico e lazer localizado em Londrina (PR), voltado a grupos escolares (da educação infantil ao ensino fundamental), que combina vivências práticas na natureza, trilhas, fazendinha, planetário e atividades recreativas em um parque aquático para transformar conteúdos teóricos da sala de aula em aprendizado lúdico."
+  },
   "patrocinadores": [
     {
       "nome": "UTFPR",
@@ -57,23 +75,5 @@
       "nome": "CIRCUIT NEW"
     }
   ],
-  "sobre_texto": "A Equipe Rocket é uma equipe de extensão da UTFPR – Campus Cornélio Procópio, formada por estudantes de diferentes áreas da engenharia que trabalham no desenvolvimento de foguetes para competições nacionais.",
-  "patrocinador_principal": {
-    "nome": "Jabuti Lazer e Conhecimento",
-    "imagem": "/assets/images/patrocinadores/jabuti.jpg",
-    "descricao": "O Jabuti Lazer e Conhecimento é um espaço de ecoturismo pedagógico e lazer localizado em Londrina (PR), voltado a grupos escolares (da educação infantil ao ensino fundamental), que combina vivências práticas na natureza, trilhas, fazendinha, planetário e atividades recreativas em um parque aquático para transformar conteúdos teóricos da sala de aula em aprendizado lúdico."
-  },
-  "estatisticas": {
-    "membros": "+200",
-    "anos": "+10",
-    "competicoes": "+20",
-    "foguetes": "+35"
-  },
-  "foguete": {
-    "imagem": "/assets/images/uploads/apollo_11_saturn_v_lifting_off_on_july_16-_1969.jpg",
-    "texto": "Por trás de cada lançamento existem meses de planejamento, desenvolvimento, simulações, fabricação e testes.",
-    "altura": "50 M",
-    "massa": "5 T",
-    "apogeu": "1 KM"
-  }
+  "link_facaparte": ""
 }
