@@ -1,58 +1,92 @@
-backend:
-  name: git-gateway
-  branch: main
+media:
+  input: assets/images/uploads
+  output: /assets/images/uploads
 
-locale: pt
-media_folder: "assets/images/uploads"
-public_folder: "/assets/images/uploads"
-
-collections:
-  - name: "site"
-    label: "Conteúdo do site"
-    files:
-      - name: "conteudo"
-        label: "Página inicial"
-        file: "data/conteudo.json"
-        format: "json"
+content:
+  - name: conteudo
+    label: Página Inicial
+    path: data/conteudo.json
+    type: file
+    fields:
+      - name: titulo_hero
+        label: Título do Hero
+        type: string
+      - name: subtitulo
+        label: Subtítulo do Hero
+        type: string
+      - name: sobre_texto
+        label: Texto 'Quem Somos'
+        type: text
+      - name: link_facaparte
+        label: Link do formulário 'Quero fazer parte'
+        type: string
+        description: Deixe vazio para mostrar o aviso 'Em desenvolvimento'.
+      - name: estatisticas
+        label: Estatísticas
+        type: object
         fields:
-          - { label: "Título do hero", name: "titulo_hero", widget: "string" }
-          - { label: "Subtítulo do hero", name: "subtitulo", widget: "string" }
-          - { label: "Texto 'Quem Somos'", name: "sobre_texto", widget: "text" }
-          - { label: "Link do formulário 'Quero fazer parte'", name: "link_facaparte", widget: "string", required: false, hint: "Deixe vazio para mostrar o aviso 'Em desenvolvimento'." }
-          - label: "Estatísticas"
-            name: "estatisticas"
-            widget: "object"
-            fields:
-              - { label: "Membros", name: "membros", widget: "string", hint: "Ex: +200" }
-              - { label: "Anos de equipe", name: "anos", widget: "string" }
-              - { label: "Competições", name: "competicoes", widget: "string" }
-              - { label: "Foguetes desenvolvidos", name: "foguetes", widget: "string" }
-          - label: "Foguete"
-            name: "foguete"
-            widget: "object"
-            fields:
-              - { label: "Foto do foguete", name: "imagem", widget: "image" }
-              - { label: "Texto", name: "texto", widget: "text" }
-              - { label: "Altura", name: "altura", widget: "string" }
-              - { label: "Massa", name: "massa", widget: "string" }
-              - { label: "Apogeu", name: "apogeu", widget: "string" }
-          - label: "Galeria"
-            name: "galeria"
-            widget: "list"
-            hint: "A primeira foto aparece em destaque (maior)."
-            fields:
-              - { label: "Foto", name: "imagem", widget: "image" }
-              - { label: "Descrição (alt)", name: "alt", widget: "string" }
-          - label: "Patrocinador principal"
-            name: "patrocinador_principal"
-            widget: "object"
-            fields:
-              - { label: "Nome", name: "nome", widget: "string" }
-              - { label: "Imagem", name: "imagem", widget: "image" }
-              - { label: "Descrição", name: "descricao", widget: "text" }
-          - label: "Parceiros e apoio"
-            name: "patrocinadores"
-            widget: "list"
-            fields:
-              - { label: "Nome", name: "nome", widget: "string" }
-              - { label: "Logo", name: "imagem", widget: "image", required: false, hint: "Sem logo, o nome aparece como texto." }
+          - name: membros
+            label: Membros
+            type: string
+          - name: anos
+            label: Anos de equipe
+            type: string
+          - name: competicoes
+            label: Competições
+            type: string
+          - name: foguetes
+            label: Foguetes desenvolvidos
+            type: string
+      - name: foguete
+        label: Foguete
+        type: object
+        fields:
+          - name: imagem
+            label: Foto do foguete
+            type: image
+          - name: texto
+            label: Texto
+            type: text
+          - name: altura
+            label: Altura
+            type: string
+          - name: massa
+            label: Massa
+            type: string
+          - name: apogeu
+            label: Apogeu
+            type: string
+      - name: galeria
+        label: Galeria
+        type: list
+        description: A primeira foto aparece em destaque (maior).
+        fields:
+          - name: imagem
+            label: Foto
+            type: image
+          - name: alt
+            label: Descrição (alt)
+            type: string
+      - name: patrocinador_principal
+        label: Patrocinador Principal
+        type: object
+        fields:
+          - name: nome
+            label: Nome
+            type: string
+          - name: imagem
+            label: Imagem
+            type: image
+          - name: descricao
+            label: Descrição
+            type: text
+      - name: patrocinadores
+        label: Parceiros e Apoio
+        type: list
+        fields:
+          - name: nome
+            label: Nome
+            type: string
+          - name: imagem
+            label: Logo
+            type: image
